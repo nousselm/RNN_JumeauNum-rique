@@ -1,0 +1,46 @@
+dataset:
+  train_parquet: "datav3/LFPO_sdf_train_balanced.parquet" # outputs/LFPG_tiles_balanced_0_01/train/lfpg_tile_2_1.parquet        outputs\LFPO_tiles_balanced_0_01\train\lfpo_tile_0_1.parquet    
+  val_parquet: "datav3/LFPO_sdf_val_balanced.parquet"
+  clamp: 0.08
+  verboese: true
+
+training:
+  batch_size: 4096
+  epochs: 3000
+  lr: 0.00005
+  #ajout pour l'early stopping
+  early_stopping_patience: 300
+  early_stopping_min_delta: 0.000001
+
+model:
+  hidden_dim: 256
+  layers: 4
+  use_fourier: true
+  fourier_dim: 32
+  fourier_scale: 1
+
+evaluation:
+  res_x: 128
+  res_y: 128
+  res_z: 128
+  output_path: "outputs/LFPO/visufinal/reconstruction_test.obj"   #"outputs/LFPO/visufinal/reconstruction_0_1_.obj"
+
+# normalization:
+#   x_norm_min: -1.0
+#   x_norm_max: 1.0
+#   y_norm_min: -1.0
+#   y_norm_max: 1.0
+#   z_norm_min: -1.0
+#   z_norm_max: 1.0
+
+  # IMPORTANT (à adapter si valeurs différentes)
+  z_center: 40.0
+  z_scale: 40.0
+
+  # si tu as aussi pour x,y (souvent oui)
+  x_center: null
+  x_scale: null
+  y_center: null
+  y_scale: null
+
+

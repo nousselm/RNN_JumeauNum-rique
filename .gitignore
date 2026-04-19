@@ -1,0 +1,12 @@
+# Exclure les fichiers spécifiques
+*.pth
+*.log
+*.obj
+*.txt
+*.blend
+*.blend1
+model.pth
+visurect/
+# Exclure les dossiers spécifiques
+__pycache__/
+gpu_env312/
