@@ -1,25 +1,5 @@
 # DeepSDF – Dataset Analysis and Distribution Correction
 
-## 📌 Description
-
-Ce projet explore l’apprentissage de représentations implicites 3D à l’aide du modèle **DeepSDF**.  
-L’objectif principal est d’identifier et corriger un problème critique lié à la distribution des données d’entraînement, impactant fortement la qualité de reconstruction des surfaces.
-
-Une analyse approfondie du signal SDF a été menée, suivie d’une étape de rééquilibrage des données, puis d’une validation expérimentale.
-
----
-
-## 🧠 Contexte
-
-Le modèle **DeepSDF** apprend une fonction de distance signée (SDF) :
-
-- SDF < 0 : point à l’intérieur de l’objet  
-- SDF > 0 : point à l’extérieur  
-- SDF = 0 : surface  
-
-L’apprentissage correct de cette fonction nécessite une distribution équilibrée de points de part et d’autre de la surface.
-
----
 
 # 📌 Overview
 
